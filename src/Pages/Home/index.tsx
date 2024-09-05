@@ -11,14 +11,33 @@ import './styles.css'
 
 export default function Home() {
   return (
-    <main>
-      <section className="addPlayer">
+    <div className='container'>
+      <aside className="addPlayer">
         <h1>Crie Seu Time</h1>
-        <label>Adicionar Jogador</label>
+
+        <p>Crie seu time de acordo com sua imaginação!</p>
+
+        <label>Crie seu jogador</label>
         <input type="text" placeholder="Digite o nome do jogador" />
 
+        <select name="selectTeam" id="selectTeam">
+          <option value="" disabled selected hidden>Selecione o time</option>
+          <option value="teamA">Time A</option>
+          <option value="TeamB">Time B</option>
+        </select>
+
         <button>Adicionar Jogador</button>
+      </aside>
+
+      <section>
+        <div className='teamA'>
+
+        </div>
+
+        <div className='teamB'>
+
+        </div>
       </section>
-    </main>
+    </div>
   )
 }
